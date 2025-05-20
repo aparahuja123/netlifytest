@@ -1,0 +1,66 @@
+/* Reset and base */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: 'Shadows Into Light', cursive;
+  background: #ffeef0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+header, footer {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Grid of cards */
+.reasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 15px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* Card styles */
+.card {
+  perspective: 1000px;
+  position: relative;
+  height: 150px;
+}
+.card .front,
+.card .back {
+  backface-visibility: hidden;
+  border-radius: 10px;
+  padding: 15px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  transition: transform 0.6s;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: white;
+}
+.card .back {
+  transform: rotateY(180deg);
+}
+.card:hover .front {
+  transform: rotateY(-180deg);
+}
+.card:hover .back {
+  transform: rotateY(0);
+}
+
+/* Button */
+#shuffleBtn {
+  padding: 10px 20px;
+  font-family: inherit;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
