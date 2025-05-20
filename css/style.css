@@ -1,54 +1,119 @@
-* { box-sizing: border-box; margin: 0; padding: 0; }
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
   font-family: Arial, sans-serif;
   background: #fff0f5;
   color: #333;
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: 100vh;
-}
-header {
-  text-align: center;
-  margin-bottom: 30px;
+  overflow-x: hidden;
+  cursor: none; /* hide default cursor */
 }
 
+/* Mute button */
+.mute-btn {
+  position: fixed; top: 20px; right: 20px;
+  background: rgba(255,255,255,0.8); border: none;
+  font-size: 1.5rem; cursor: pointer; z-index: 1000;
+}
+
+/* Parallax header */
+header.parallax {
+  position: relative; width: 100%; height: 200px;
+  overflow: hidden; text-align: center; color: white;
+  display: flex; flex-direction: column; align-items: center;
+  justify-content: center;
+  background: #ff6b81;
+}
+header.parallax .layer {
+  position: absolute; width: 200%; height: 200%;
+  background: url('../icons/heart.svg') no-repeat center;
+  opacity: 0.1;
+}
+header.parallax .layer:nth-child(1) { background-size: 50px; }
+header.parallax .layer:nth-child(2) { background-size: 100px; }
+header.parallax .layer:nth-child(3) { background-size: 150px; }
+header.parallax h1 {
+  position: relative; font-size: 2.5rem; z-index: 10;
+}
+header.parallax p {
+  position: relative; margin-top: 0.5rem; z-index: 10;
+}
+
+/* Grid and cards */
 .reasons-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 20px;
-  width: 100%;
-  max-width: 1000px;
+  grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 20px; padding: 40px;
+  max-width: 1000px; margin: 0 auto;
 }
-
 .card {
-  background: white;
+  perspective: 1000px;
+}
+.card-inner {
+  position: relative; width: 100%; height: 250px;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+  --accent-color: #ff4081;
+}
+.card:hover .card-inner { transform: rotateY(180deg); }
+
+/* Front & Back */
+.card-front, .card-back {
+  position: absolute; width: 100%; height: 100%;
+  backface-visibility: hidden;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  background: white;
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
   padding: 20px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  position: relative;
-  overflow: hidden;
-  animation: fadeIn 0.6s ease both;
 }
-.card:hover {
-  transform: scale(1.05);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+.card-front {
+  transition: background-color 0.3s;
+}
+.card:hover .card-front {
+  background-color: var(--accent-color);
+  color: white;
+}
+.card-back {
+  transform: rotateY(180deg);
+  overflow: auto;
 }
 .card .number {
-  font-size: 20px;
-  font-weight: bold;
-  margin-bottom: 10px;
-  color: #ff4081;
+  font-size: 1.2rem; font-weight: bold; margin-bottom: 10px;
+  color: var(--accent-color);
 }
 .card .title {
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 1rem; text-align: center;
+}
+.card-back img {
+  max-width: 100%; border-radius: 8px; margin-bottom: 10px;
+  /* <img.txt> insert photo here */
+}
+.card-back p {
+  font-size: 0.9rem; line-height: 1.4;
+  text-align: center;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(10px); }
+/* Fade-in animation */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(20px); }
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heart trail */
+#heartContainer {
+  position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+  pointer-events: none; overflow: hidden;
+  z-index: 900;
+}
+.heart {
+  position: absolute; width: 20px; height: 20px;
+  background: url('../icons/heart.svg') no-repeat center;
+  background-size: contain;
+  pointer-events: none;
+  animation: heart-fade 1s ease-out forwards;
+}
+@keyframes heart-fade {
+  0% { opacity: 1; transform: scale(1); }
+  100% { opacity: 0; transform: scale(2) translateY(-20px); }
 }
