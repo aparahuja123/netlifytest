@@ -61,7 +61,7 @@ reasons.forEach((item, index) => {
   card.innerHTML = `
     <div class="flip-card-inner">
       <div class="flip-card-front">
-        <div class="number">${index + 1}.</div>
+        <div class="number">Chapter ${index + 1}.</div>
         <div class="title">${item.title}</div>
       </div>
       <div class="flip-card-back">
