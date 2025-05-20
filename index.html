@@ -2,50 +2,20 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>24 Reasons Why I Love You</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>24 Reasons Why I Love You ❤️</h1>
-    <p>Add new memories, search, or browse all reasons!</p>
-    <div class="controls">
-      <input type="text" id="searchInput" placeholder="Search reasons...">
-      <button id="addBtn">Add Reason</button>
-    </div>
+    <h1>24 Reasons Why I Love You</h1>
+    <p>A reason for every month we've been together 💖</p>
   </header>
 
-  <main>
-    <ul class="reasons-list" id="reasonsList"></ul>
+  <main class="reasons-grid" id="reasonsGrid">
+    <!-- Cards will be injected here by JS -->
   </main>
 
-  <!-- Add Reason Modal -->
-  <div id="modal" class="modal hidden">
-    <div class="modal-content">
-      <h2>Add a New Reason</h2>
-      <form id="reasonForm">
-        <label>
-          Month #
-          <input type="number" id="monthInput" min="1" max="999" required>
-        </label>
-        <label>
-          Title
-          <input type="text" id="titleInput" required>
-        </label>
-        <label>
-          Details
-          <textarea id="detailInput" rows="3" required></textarea>
-        </label>
-        <div class="buttons">
-          <button type="submit">Save</button>
-          <button type="button" id="cancelBtn">Cancel</button>
-        </div>
-      </form>
-    </div>
-  </div>
-
-  <script src="js/app.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
