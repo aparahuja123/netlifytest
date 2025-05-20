@@ -1,29 +1,102 @@
 const reasons = [
-  { title: "Your kindness", message: "You treat everyone with warmth and respect, and it inspires me every day." },
-  { title: "Your smile", message: "Your smile lights up my world and makes everything feel right." },
-  { title: "How you support me", message: "You're always there, cheering me on and lifting me up." },
-  { title: "Your laugh", message: "That laugh of yours is contagious and makes my heart dance." },
-  { title: "Your love for animals", message: "Seeing how much you care for animals shows your beautiful heart." },
-  { title: "How you hold my hand", message: "Your touch brings comfort, peace, and love all at once." },
-  { title: "Our late night talks", message: "Those deep conversations are where I feel closest to you." },
-  { title: "Your creativity", message: "The way you see the world differently always amazes me." },
-  { title: "How you surprise me", message: "Your little surprises make life so much more magical." },
-  { title: "The way you look at me", message: "That look tells me everything I need to know about love." },
-  { title: "How you always listen", message: "You hear me even when I don’t speak. That’s rare and special." },
-  { title: "Your hugs", message: "Your hugs feel like home – safe, warm, and full of love." },
-  { title: "Your sense of humor", message: "You always know how to make me laugh, no matter what." },
-  { title: "Our shared dreams", message: "Planning the future with you is my favorite thing to do." },
-  { title: "Your passion", message: "Your energy and enthusiasm make everything more exciting." },
-  { title: "How you make me feel special", message: "You remind me I’m loved in the smallest and biggest ways." },
-  { title: "Your intelligence", message: "Your mind impresses me every single day." },
-  { title: "How you dance with me", message: "Even when there’s no music, you make me want to dance." },
-  { title: "Your patience", message: "You handle tough moments with such grace and calm." },
-  { title: "Our adventures", message: "Every little journey with you becomes unforgettable." },
-  { title: "How you say 'I love you'", message: "When you say it, I feel it with my whole heart." },
-  { title: "Your eyes", message: "They sparkle with kindness, love, and all the things I adore." },
-  { title: "The way you care for others", message: "You give so much of yourself to help others." },
-  { title: "You're my best friend", message: "Above all, I love you because you're my person – my best friend." }
+  {
+    title: "How did it all begin?",
+    message: "It started with a Bumble match and a few shared Instagram reels. Life got busy, and the chats slowed down to just story replies. But that tiny spark quietly waited. Was fate already at work?"
+  },
+  {
+    title: "Why did Bangalore matter?",
+    message: "In December 2022, while Apar interned in Bangalore, Khushi replied to a story. Distance made meeting hard – she was in Pune, he in Bangalore, and Singapore was on the horizon. Could anything even come of this?"
+  },
+  {
+    title: "Was there still hope?",
+    message: "By February, Khushi was back in Gurgaon. They chatted, but plans never worked out. Then came March, and IIT Delhi’s fest gave them a reason to connect again. But when plans failed again, was it over?"
+  },
+  {
+    title: "What changed with one show?",
+    message: "A standup show plan with Shaurya flopped. Apar texted Khushi impulsively. She replied late, but fate had a plan – her next day’s plan got canceled. Could this be their chance to finally meet?"
+  },
+  {
+    title: "How did the first date happen?",
+    message: "They chose Raasta Café in Hauz Khas. Apar sent options with thoughtful pros & cons while on call with Shaurya. Khushi was impressed. She said yes. Could this be the start of something beautiful?"
+  },
+  {
+    title: "Did she almost not show up?",
+    message: "Khushi’s first Delhi metro ride scared her so much, she called Ravi panicking. But somehow, she made it to the café. Apar was already waiting, in his olive green shirt. Was this destiny testing them?"
+  },
+  {
+    title: "What was their first impression?",
+    message: "They talked for hours, sharing stories and laughter over pizza and drinks. Olive (Apar) listened intently. The date wasn’t over yet. Was one café meeting really enough to know someone?"
+  },
+  {
+    title: "Why a walk next?",
+    message: "The Delhi weather was kind, so they went for a walk in Deer Park. They talked about everything—shows, food, science, dating. The conversation never stopped. Were they already falling for each other?"
+  },
+  {
+    title: "Was goodbye hard?",
+    message: "Three hours flew by. It was dark, and Khushi had to go home. Apar dropped her at the metro station. They hugged – his first real date hug. Could this really be their only meeting?"
+  },
+  {
+    title: "Did they stay in touch?",
+    message: "They never stopped talking. Slowly, without planning it, they became each other's daily person. Time passed, feelings grew. Was something deeper blooming between them?"
+  },
+  {
+    title: "Why did May feel magical?",
+    message: "Apar’s Singapore job got delayed. Khushi returned to Delhi. They planned their next meet—Van Gogh, ice skating, and more. Were the stars aligning just for them?"
+  },
+  {
+    title: "Did he meet the family?",
+    message: "In the scorching heat, they sat below her apartment talking for hours. Khushi’s mom invited him for lunch. Apar met Dexy, her dog, and had lunch with her mom. Was he already part of her world?"
+  },
+  {
+    title: "What happened on May 20th?",
+    message: "Apar couldn’t sleep. He talked to Shaurya and Tanvi—should he confess his feelings? Khushi was asking her friends the same. Were they both secretly wishing for the same answer?"
+  },
+  {
+    title: "Was she ready?",
+    message: "Apar asked her to be his girlfriend. She was hesitant—distance was scary. But after hours of heartfelt talk, she agreed to a one-month trial. Could this trial turn into forever?"
+  },
+  {
+    title: "Did it feel real?",
+    message: "They talked daily, but Apar was careful. He never called her his girlfriend—not yet. One month passed, and he reminded her of their one-month anniversary. Had she fallen too?"
+  },
+  {
+    title: "Why did Pune matter?",
+    message: "Before Apar flew to Singapore, he planned a family trip to Mahabaleshwar via Pune. He carved out one day to meet Khushi. Could one more day be enough to create forever memories?"
+  },
+  {
+    title: "What happened in Yorkshire?",
+    message: "They had breakfast, visited Shaniwar Wada, but the crowd kept them from talking. Still, something felt magical. Was the city conspiring to make space for their love?"
+  },
+  {
+    title: "What made the date perfect?",
+    message: "They ended up in a café, then to Okayama Park. They talked deeply, did the 36 questions to fall in love, and claimed 'Wildfire' as their song. Were their hearts now completely entangled?"
+  },
+  {
+    title: "Was goodbye harder this time?",
+    message: "Evening came too soon. Silent, shy, they avoided the moment—but their eyes said it all. A first kiss, nervous and sweet. A final hug. Was this goodbye, or something else?"
+  },
+  {
+    title: "Did long distance scare them?",
+    message: "Yes, but they kept showing up for each other. Day by day, call by call. Despite miles, love found its rhythm. Could their hearts really stay so close from so far?"
+  },
+  {
+    title: "Was it official now?",
+    message: "Khushi had fallen too. No more doubts. They were officially together, in love. Not just a trial. Not just a story. Was this what true love looked like?"
+  },
+  {
+    title: "How did time treat them?",
+    message: "From texts to video calls, missed each other deeply but stayed patient. They celebrated little moments. Could love really grow across oceans?"
+  },
+  {
+    title: "What makes this special?",
+    message: "They didn’t plan for forever—but life kept weaving them closer. Their story is not just about love, but fate, patience, and joy. Can a story get any more magical?"
+  },
+  {
+    title: "Where does it go next?",
+    message: "From Bumble to forever. Through metros, monsoons, messages, and memories—they kept choosing each other. And now here we are… Do you believe in soulmates now?"
+  }
 ];
+
 
 // Convert IST (UTC+5:30) to UTC
 // const unlockDateUTC = new Date('2025-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
