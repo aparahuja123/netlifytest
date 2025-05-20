@@ -54,65 +54,37 @@ main { flex: 1; padding: 2rem; }
   transition: transform 0.3s;
 }
 .reason-item:hover { transform: translateY(-5px); }
-.reason-item h3 {
-  font-size: 1.2rem;
-  margin-bottom: 0.5rem;
-}
+.reason-item h3 { font-size: 1.2rem; margin-bottom: 0.5rem; }
 .reason-item p { font-size: 0.95rem; line-height: 1.3; }
 .reason-item .month-badge {
-  position: absolute;
-  top: 10px; right: 10px;
-  background: #ff6b81;
-  color: white;
-  border-radius: 50%;
-  width: 30px; height: 30px;
+  position: absolute; top: 10px; right: 10px;
+  background: #ff6b81; color: white;
+  border-radius: 50%; width: 30px; height: 30px;
   display: flex; align-items: center; justify-content: center;
   font-weight: bold;
 }
 .reason-item .delete-btn {
-  position: absolute;
-  bottom: 10px; right: 10px;
-  background: none;
-  border: none;
-  color: #999;
-  cursor: pointer;
-  font-size: 1.2rem;
+  position: absolute; bottom: 10px; right: 10px;
+  background: none; border: none; color: #999;
+  cursor: pointer; font-size: 1.2rem;
 }
 .reason-item .delete-btn:hover { color: #333; }
 
 /* Modal Styles */
-.modal {
-  position: fixed;
-  top: 0; left: 0; width: 100vw; height: 100vh;
-  background: rgba(0,0,0,0.5);
-  display: flex; align-items: center; justify-content: center;
+.modal { position: fixed; top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5); display: flex; align-items: center; justify-content: center;
 }
 .modal.hidden { display: none; }
-.modal-content {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
+.modal-content { background: white; padding: 2rem; border-radius: 10px;
   width: 90%; max-width: 400px;
 }
 .modal-content h2 { margin-bottom: 1rem; }
-.modal-content form label {
-  display: block;
-  margin-bottom: 0.75rem;
-}
-.modal-content input,
-.modal-content textarea {
-  width: 100%;
-  padding: 0.5rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+.modal-content form label { display: block; margin-bottom: 0.75rem; }
+.modal-content input, .modal-content textarea {
+  width: 100%; padding: 0.5rem; border: 1px solid #ccc; border-radius: 5px;
 }
 .buttons { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem; }
-.buttons button {
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
+.buttons button { padding: 0.5rem 1rem; border: none; border-radius: 5px; cursor: pointer; }
 .buttons button[type="submit"] { background: #6bc1ff; color: white; }
 .buttons button[type="button"] { background: #ccc; color: #333; }
 .buttons button:hover { opacity: 0.9; }
