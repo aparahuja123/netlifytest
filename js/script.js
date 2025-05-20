@@ -1,40 +1,51 @@
 const reasons = [
-  { title: "Your kindness" },
-  { title: "Your smile" },
-  { title: "How you support me" },
-  { title: "Your laugh" },
-  { title: "Your love for animals" },
-  { title: "How you hold my hand" },
-  { title: "Our late night talks" },
-  { title: "Your creativity" },
-  { title: "How you surprise me" },
-  { title: "The way you look at me" },
-  { title: "How you always listen" },
-  { title: "Your hugs" },
-  { title: "Your sense of humor" },
-  { title: "Our shared dreams" },
-  { title: "Your passion" },
-  { title: "How you make me feel special" },
-  { title: "Your intelligence" },
-  { title: "How you dance with me" },
-  { title: "Your patience" },
-  { title: "Our adventures" },
-  { title: "How you say 'I love you'" },
-  { title: "Your eyes" },
-  { title: "The way you care for others" },
-  { title: "You're my best friend" }
+  { title: "Your kindness", message: "You treat everyone with warmth and respect, and it inspires me every day." },
+  { title: "Your smile", message: "Your smile lights up my world and makes everything feel right." },
+  { title: "How you support me", message: "You're always there, cheering me on and lifting me up." },
+  { title: "Your laugh", message: "That laugh of yours is contagious and makes my heart dance." },
+  { title: "Your love for animals", message: "Seeing how much you care for animals shows your beautiful heart." },
+  { title: "How you hold my hand", message: "Your touch brings comfort, peace, and love all at once." },
+  { title: "Our late night talks", message: "Those deep conversations are where I feel closest to you." },
+  { title: "Your creativity", message: "The way you see the world differently always amazes me." },
+  { title: "How you surprise me", message: "Your little surprises make life so much more magical." },
+  { title: "The way you look at me", message: "That look tells me everything I need to know about love." },
+  { title: "How you always listen", message: "You hear me even when I don’t speak. That’s rare and special." },
+  { title: "Your hugs", message: "Your hugs feel like home – safe, warm, and full of love." },
+  { title: "Your sense of humor", message: "You always know how to make me laugh, no matter what." },
+  { title: "Our shared dreams", message: "Planning the future with you is my favorite thing to do." },
+  { title: "Your passion", message: "Your energy and enthusiasm make everything more exciting." },
+  { title: "How you make me feel special", message: "You remind me I’m loved in the smallest and biggest ways." },
+  { title: "Your intelligence", message: "Your mind impresses me every single day." },
+  { title: "How you dance with me", message: "Even when there’s no music, you make me want to dance." },
+  { title: "Your patience", message: "You handle tough moments with such grace and calm." },
+  { title: "Our adventures", message: "Every little journey with you becomes unforgettable." },
+  { title: "How you say 'I love you'", message: "When you say it, I feel it with my whole heart." },
+  { title: "Your eyes", message: "They sparkle with kindness, love, and all the things I adore." },
+  { title: "The way you care for others", message: "You give so much of yourself to help others." },
+  { title: "You're my best friend", message: "Above all, I love you because you're my person – my best friend." }
 ];
 
 const grid = document.getElementById('reasonsGrid');
+
 reasons.forEach((item, index) => {
   const card = document.createElement('div');
   card.className = 'card';
-  card.style.animationDelay = `${index * 0.05}s`;
 
   card.innerHTML = `
-    <div class="number">${index + 1}.</div>
-    <div class="title">${item.title}</div>
+    <div class="flip-card-inner">
+      <div class="flip-card-front">
+        <div class="number">${index + 1}.</div>
+        <div class="title">${item.title}</div>
+      </div>
+      <div class="flip-card-back">
+        <p>${item.message}</p>
+      </div>
+    </div>
   `;
+
+  card.addEventListener('click', () => {
+    card.classList.toggle('flip');
+  });
 
   grid.appendChild(card);
 });
