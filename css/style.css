@@ -1,79 +1,118 @@
-/* Reset */
-* { box-sizing: border-box; margin: 0; padding: 0; }
-
+/* RESET */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 body {
-  font-family: 'Great Vibes', cursive;
-  background: #fff0f6;
+  font-family: 'Poppins', sans-serif;
+  background: #fefefe;
+  color: #333;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  padding: 20px;
-  color: #333;
+  min-height: 100vh;
 }
-header, footer {
+header {
+  padding: 2rem;
   text-align: center;
-  margin-bottom: 20px;
+  background: linear-gradient(135deg, #ffc1cc, #ffe0b2);
 }
-
-/* Grid layout */
-.reasons-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-  gap: 15px;
-  width: 100%;
-  max-width: 900px;
+header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+header p { margin-bottom: 1rem; }
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
 }
-
-/* Card flips */
-.card { perspective: 1000px; position: relative; height: 150px; }
-.card .front,
-.card .back {
-  backface-visibility: hidden;
-  border-radius: 10px;
-  padding: 15px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  transition: transform 0.6s;
-  position: absolute;
-  width: 100%; height: 100%;
-  display: flex; align-items: center; justify-content: center; text-align: center;
-  background: #fff;
+.controls input {
+  padding: 0.5rem 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
 }
-.card .back { transform: rotateY(180deg); }
-.card:hover .front { transform: rotateY(-180deg); }
-.card:hover .back  { transform: rotateY(0); }
-
-/* Heart-button styles */
-#shuffleBtn {
-  background: #ff85c0;
-  color: white;
-  font-family: inherit;
-  font-size: 1.1rem;
-  padding: 12px 24px;
+.controls button {
+  padding: 0.5rem 1rem;
   border: none;
-  border-radius: 50px;
+  background: #ff6b81;
+  color: white;
+  border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  transition: background 0.3s;
+}
+.controls button:hover { background: #ff4c61; }
+
+main { flex: 1; padding: 2rem; }
+.reasons-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1rem;
+  list-style: none;
+}
+.reason-item {
+  background: white;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
   position: relative;
   overflow: hidden;
+  transition: transform 0.3s;
 }
-#shuffleBtn .heart {
-  display: inline-block;
-  margin-left: 8px;
-  animation: pulse 1.5s infinite;
+.reason-item:hover { transform: translateY(-5px); }
+.reason-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
 }
+.reason-item p { font-size: 0.95rem; line-height: 1.3; }
+.reason-item .month-badge {
+  position: absolute;
+  top: 10px; right: 10px;
+  background: #ff6b81;
+  color: white;
+  border-radius: 50%;
+  width: 30px; height: 30px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: bold;
+}
+.reason-item .delete-btn {
+  position: absolute;
+  bottom: 10px; right: 10px;
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  font-size: 1.2rem;
+}
+.reason-item .delete-btn:hover { color: #333; }
 
-/* Pulse animation for heart */
-@keyframes pulse {
-  0%, 100% { transform: scale(1); }
-  50%      { transform: scale(1.3); }
+/* Modal Styles */
+.modal {
+  position: fixed;
+  top: 0; left: 0; width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  display: flex; align-items: center; justify-content: center;
 }
-
-/* Heart pop on click */
-#shuffleBtn .heart.pop {
-  animation: pop 0.4s ease-out;
+.modal.hidden { display: none; }
+.modal-content {
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 90%; max-width: 400px;
 }
-@keyframes pop {
-  0%   { transform: scale(1); }
-  50%  { transform: scale(1.8); }
-  100% { transform: scale(1); }
+.modal-content h2 { margin-bottom: 1rem; }
+.modal-content form label {
+  display: block;
+  margin-bottom: 0.75rem;
 }
+.modal-content input,
+.modal-content textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.buttons { display: flex; justify-content: flex-end; gap: 0.5rem; margin-top: 1rem; }
+.buttons button {
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.buttons button[type="submit"] { background: #6bc1ff; color: white; }
+.buttons button[type="button"] { background: #ccc; color: #333; }
+.buttons button:hover { opacity: 0.9; }

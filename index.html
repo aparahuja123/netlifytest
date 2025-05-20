@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>24 Reasons Why I Love You</title>
-  <!-- Romantic handwritten font -->
-  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <!-- Clean, readable font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
   <header>
-    <h1>24 Reasons Why I Love You</h1>
-    <p>A note for each month of our journey together ❤️</p>
+    <h1>24 Reasons Why I Love You ❤️</h1>
+    <p>Add new memories, search, or browse all reasons!</p>
+    <div class="controls">
+      <input type="text" id="searchInput" placeholder="Search reasons...">
+      <button id="addBtn">Add Reason</button>
+    </div>
   </header>
 
-  <main class="reasons-grid">
-    <!-- Month 1 -->
-    <div class="card">
-      <div class="front">
-        <span class="num">1.</span> Placeholder Title
-      </div>
-      <div class="back">
-        Reason goes here.
-      </div>
-    </div>
-    <!-- Repeat cards for months 2–24 -->
-    <!-- ... -->
-    <div class="card">
-      <div class="front"><span class="num">24.</span> Placeholder Title</div>
-      <div class="back">Reason goes here.</div>
-    </div>
+  <main>
+    <ul class="reasons-list" id="reasonsList">
+      <!-- JS will populate existing 24 items + new ones -->
+    </ul>
   </main>
 
-  <footer>
-    <!-- Heart-shaped shuffle button -->
-    <button id="shuffleBtn">
-      Shuffle <span class="heart">💖</span>
-    </button>
-  </footer>
+  <!-- Add Reason Modal -->
+  <div id="modal" class="modal hidden">
+    <div class="modal-content">
+      <h2>Add a New Reason</h2>
+      <form id="reasonForm">
+        <label>
+          Month #
+          <input type="number" id="monthInput" min="1" max="999" required>
+        </label>
+        <label>
+          Title
+          <input type="text" id="titleInput" required>
+        </label>
+        <label>
+          Details
+          <textarea id="detailInput" rows="3" required></textarea>
+        </label>
+        <div class="buttons">
+          <button type="submit">Save</button>
+          <button type="button" id="cancelBtn">Cancel</button>
+        </div>
+      </form>
+    </div>
+  </div>
 
-  <script src="js/script.js"></script>
+  <script src="js/app.js"></script>
 </body>
 </html>
