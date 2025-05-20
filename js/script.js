@@ -25,11 +25,37 @@ const reasons = [
   { title: "You're my best friend", message: "Above all, I love you because you're my person – my best friend." }
 ];
 
+// Convert IST (UTC+5:30) to UTC
+const unlockDateUTC = new Date('2025-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
+
+const countdownElement = document.getElementById('countdown');
 const grid = document.getElementById('reasonsGrid');
+let unlocked = false;
+
+function updateCountdown() {
+  const now = new Date();
+  const diff = unlockDateUTC - now;
+
+  if (diff <= 0) {
+    countdownElement.innerHTML = "✨ The stories are now unlocked! ✨";
+    unlocked = true;
+    document.querySelectorAll('.card').forEach(card => {
+      card.classList.remove('disabled');
+    });
+    return;
+  }
+
+  const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((diff / (1000 * 60)) % 60);
+  const seconds = Math.floor((diff / 1000) % 60);
+
+  countdownElement.innerHTML = `⏳ Unlocking in ${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
 
 reasons.forEach((item, index) => {
   const card = document.createElement('div');
-  card.className = 'card';
+  card.className = 'card disabled'; // initially disabled
 
   card.innerHTML = `
     <div class="flip-card-inner">
@@ -44,8 +70,14 @@ reasons.forEach((item, index) => {
   `;
 
   card.addEventListener('click', () => {
-    card.classList.toggle('flip');
+    if (unlocked) {
+      card.classList.toggle('flip');
+    }
   });
 
   grid.appendChild(card);
 });
+
+// Start countdown
+updateCountdown();
+setInterval(updateCountdown, 1000);
