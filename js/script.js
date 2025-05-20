@@ -5,7 +5,7 @@ const reasons = [
   },
   {
     title: "Why did Bangalore matter?",
-    message: "In December 2022, while Apar interned in Bangalore, Khushi replied to a story. Distance made meeting hard – she was in Pune, he in Bangalore, and Singapore was on the horizon. Could anything even come of this?"
+    message: "In December 2022, while Apar interned in Bangalore, Khushi replied to a story and suggested they should meet. Distance made meeting hard – she was in Pune, he in Bangalore, and Singapore was on the horizon. Could anything even come of this?"
   },
   {
     title: "Was there still hope?",
@@ -17,7 +17,7 @@ const reasons = [
   },
   {
     title: "How did the first date happen?",
-    message: "They chose Raasta Café in Hauz Khas. Apar sent options with thoughtful pros & cons while on call with Shaurya. Khushi was impressed. She said yes. Could this be the start of something beautiful?"
+    message: "They chose Raasta Café in Hauz Khas. Apar sent options with thoughtful pros & cons. Khushi was impressed. She said yes. Could this be the start of something beautiful?"
   },
   {
     title: "Did she almost not show up?",
@@ -29,11 +29,11 @@ const reasons = [
   },
   {
     title: "Why a walk next?",
-    message: "The Delhi weather was kind, so they went for a walk in Deer Park. They talked about everything—shows, food, science, dating. The conversation never stopped. Were they already falling for each other?"
+    message: "The Delhi weather was kind, so they went for a walk in Deer Park. They talked about everything—shows, food, medical stuff, dating. The conversation never stopped. Were they already falling for each other?"
   },
   {
     title: "Was goodbye hard?",
-    message: "Three hours flew by. It was dark, and Khushi had to go home. Apar dropped her at the metro station. They hugged – his first real date hug. Could this really be their only meeting?"
+    message: "Three hours flew by. It was late, and Khushi had to go home. Apar dropped her at the metro station. They hugged – his first real date hug. Could this really be their only meeting?"
   },
   {
     title: "Did they stay in touch?",
@@ -41,11 +41,11 @@ const reasons = [
   },
   {
     title: "Why did May feel magical?",
-    message: "Apar’s Singapore job got delayed. Khushi returned to Delhi. They planned their next meet—Van Gogh, ice skating, and more. Were the stars aligning just for them?"
+    message: "Apar’s Singapore joining got delayed. Khushi returned to Delhi. They planned their next meet—Van Gogh, ice skating, and more. Were the stars aligning just for them?"
   },
   {
     title: "Did he meet the family?",
-    message: "In the scorching heat, they sat below her apartment talking for hours. Khushi’s mom invited him for lunch. Apar met Dexy, her dog, and had lunch with her mom. Was he already part of her world?"
+    message: "In the scorching heat, they sat below her apartment talking for hours. Khushi’s mom invited him for lunch. Apar met Dexy, and had lunch with her mom. Was he already part of her world?"
   },
   {
     title: "What happened on May 20th?",
@@ -57,14 +57,14 @@ const reasons = [
   },
   {
     title: "Did it feel real?",
-    message: "They talked daily, but Apar was careful. He never called her his girlfriend—not yet. One month passed, and he reminded her of their one-month anniversary. Had she fallen too?"
+    message: "They talked daily, but Apar was careful. He never called her his girlfriend—not yet. One month passed, and he reminded her of their one-month anniversary and the relationship was official now. Had she fallen too?"
   },
   {
     title: "Why did Pune matter?",
     message: "Before Apar flew to Singapore, he planned a family trip to Mahabaleshwar via Pune. He carved out one day to meet Khushi. Could one more day be enough to create forever memories?"
   },
   {
-    title: "What happened in Yorkshire?",
+    title: "What happened in Yolkshire?",
     message: "They had breakfast, visited Shaniwar Wada, but the crowd kept them from talking. Still, something felt magical. Was the city conspiring to make space for their love?"
   },
   {
@@ -79,6 +79,7 @@ const reasons = [
     title: "Did long distance scare them?",
     message: "Yes, but they kept showing up for each other. Day by day, call by call. Despite miles, love found its rhythm. Could their hearts really stay so close from so far?"
   },
+  // NEED TO REVIEW BELOW
   {
     title: "Was it official now?",
     message: "Khushi had fallen too. No more doubts. They were officially together, in love. Not just a trial. Not just a story. Was this what true love looked like?"
