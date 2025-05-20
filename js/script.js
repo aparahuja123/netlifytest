@@ -5,7 +5,7 @@ const reasons = [
   },
   {
     title: "Why did Bangalore matter?",
-    message: "In December 2022, while Apar interned in Bangalore, Khushi replied to a story and suggested they should meet. Distance made meeting hard – she was in Pune, he in Bangalore, and Singapore was on the horizon. Could anything even come of this?"
+    message: "In December 2022, while Apar interned in Bangalore, Khushi replied to a story and suggested they should meet when she's in Gurgaon. Distance made meeting hard – she was in Pune, and Singapore was on the horizon. Could anything even come of this?"
   },
   {
     title: "Was there still hope?",
@@ -13,7 +13,7 @@ const reasons = [
   },
   {
     title: "What changed with one show?",
-    message: "A standup show plan with Shaurya flopped. Apar texted Khushi impulsively. She replied late, but fate had a plan – her next day’s plan got canceled. Could this be their chance to finally meet?"
+    message: "Shaurya cancelled a standup show plan. Apar texted Khushi impulsively to join. She replied late, but fate had a plan – her next day’s plan got canceled. Could this be their chance to finally meet?"
   },
   {
     title: "How did the first date happen?",
@@ -52,8 +52,8 @@ const reasons = [
     message: "Apar couldn’t sleep. He talked to Shaurya and Tanvi—should he confess his feelings? Khushi was asking her friends the same. Were they both secretly wishing for the same answer?"
   },
   {
-    title: "Was she ready?",
-    message: "Apar asked her to be his girlfriend. She was hesitant—distance was scary. But after hours of heartfelt talk, she agreed to a one-month trial. Could this trial turn into forever?"
+    title: "21st May: Was she ready?",
+    message: "Apar asked her to be his girlfriend. She was hesitant — distance was scary. But after hours of heartfelt talk, she agreed to a one-month trial. Could this trial turn into forever?"
   },
   {
     title: "Did it feel real?",
@@ -73,35 +73,33 @@ const reasons = [
   },
   {
     title: "Was goodbye harder this time?",
-    message: "Evening came too soon. Silent, shy, they avoided the moment—but their eyes said it all. A first kiss, nervous and sweet. A final hug. Was this goodbye, or something else?"
+    message: "Evening came too soon. Silent, shy, they avoided the moment—but their eyes said it all. A first kiss, nervous and sweet. A final hug. Was this a goodbye, or a see you soon?"
   },
   {
     title: "Did long distance scare them?",
     message: "Yes, but they kept showing up for each other. Day by day, call by call. Despite miles, love found its rhythm. Could their hearts really stay so close from so far?"
   },
-  // NEED TO REVIEW BELOW
   {
-    title: "Was it official now?",
-    message: "Khushi had fallen too. No more doubts. They were officially together, in love. Not just a trial. Not just a story. Was this what true love looked like?"
+    title: "What does true love look like?",
+    message: "It’s not just about the good times. They fought, they disagreed, but they always found their way back. They learned to listen, to understand, and to love even more. Was this what true love really meant?"
   },
   {
     title: "How did time treat them?",
-    message: "From texts to video calls, missed each other deeply but stayed patient. They celebrated little moments. Could love really grow across oceans?"
+    message: "From texts to video calls, missed each other deeply, argued a little but always stayed patient. They celebrated little moments. Could love really grow across oceans?"
   },
   {
     title: "What makes this special?",
-    message: "They didn’t plan for forever—but life kept weaving them closer. Their story is not just about love, but fate, patience, and joy. Can a story get any more magical?"
+    message: "They didn’t plan for forever—but life kept weaving them closer. Their story is not just about love, but fate, patience, and many many incredible moments. Can a story get any more magical?"
   },
   {
     title: "Where does it go next?",
-    message: "From Bumble to forever. Through metros, monsoons, messages, and memories—they kept choosing each other. And now here we are… Do you believe in soulmates now?"
+    message: "From Bumble to forever? Through videos calls, messages, trips and memories—they kept choosing each other. And now here we are… So, do you believe in soulmates now?"
   }
 ];
 
 
 // Convert IST (UTC+5:30) to UTC
-// const unlockDateUTC = new Date('2025-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
-const unlockDateUTC = new Date('2024-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
+const unlockDateUTC = new Date('2025-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
 
 const countdownElement = document.getElementById('countdown');
 const grid = document.getElementById('reasonsGrid');
