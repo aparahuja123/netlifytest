@@ -26,7 +26,8 @@ const reasons = [
 ];
 
 // Convert IST (UTC+5:30) to UTC
-const unlockDateUTC = new Date('2025-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
+// const unlockDateUTC = new Date('2025-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
+const unlockDateUTC = new Date('2024-05-20T18:30:00Z'); // 21 May 2025 00:00 IST
 
 const countdownElement = document.getElementById('countdown');
 const grid = document.getElementById('reasonsGrid');
