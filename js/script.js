@@ -38,7 +38,7 @@ function updateCountdown() {
   const diff = unlockDateUTC - now;
 
   if (diff <= 0) {
-    countdownElement.innerHTML = "Happy Anniversary, love of my life ❤️";
+    countdownElement.innerHTML = "Happy Anniversary, my love ❤️";
     unlocked = true;
     document.querySelectorAll('.card').forEach(card => {
       card.classList.remove('disabled');
