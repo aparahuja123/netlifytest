@@ -1,7 +1,8 @@
 const reasons = [
   {
     title: "How did it all begin?",
-    message: "It started with a Bumble match and a few shared Instagram reels. Life got busy, and the chats slowed down to just story replies. But that tiny spark quietly waited. Was fate already at work?"
+    message: "It started with a Bumble match and a few shared Instagram reels. Life got busy, and the chats slowed down to just story replies. But that tiny spark quietly waited. Was fate already at work?",
+    song: "songs/1.mp3"
   },
   {
     title: "Why did Bangalore matter?",
@@ -154,3 +155,35 @@ reasons.forEach((item, index) => {
 // Start countdown
 updateCountdown();
 setInterval(updateCountdown, 1000);
+const cardContainer = document.getElementById("card-container");
+
+let currentAudio = null;
+
+function playSong(src) {
+  if (!src) return;
+
+  if (currentAudio) {
+    currentAudio.pause();
+    currentAudio.currentTime = 0;
+  }
+
+  currentAudio = new Audio(src);
+  currentAudio.play();
+}
+
+reasons.forEach((reason, index) => {
+  const card = document.createElement("div");
+  card.className = "card";
+  card.innerHTML = `
+    <div class="card-inner">
+      <div class="card-front">
+        <h2></h2> <!-- Title intentionally hidden -->
+      </div>
+      <div class="card-back">
+        <p>${reason.message}</p>
+        ${reason.song ? `<button class="play-btn" onclick="playSong('${reason.song}')">▶ Play Song</button>` : ""}
+      </div>
+    </div>
+  `;
+  cardContainer.appendChild(card);
+});
